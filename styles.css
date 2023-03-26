@@ -14,6 +14,7 @@ html {
     background-attachment: fixed;
     scroll-behavior: smooth;
     scroll-padding-top: 5em;
+    
 }
 
 body {
@@ -111,22 +112,25 @@ ol > li {
     .nav-bar {
         height: fit-content;
         width: 100%;
+    
     }
+
+    
     
     .nav {
         position: static;
         width: 100%;
         padding: 0 15em;
+        
     }
     
     .nav > ul {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         
     }
 
     .nav > ul > li {
-        margin: 10px 0;
+        margin: 10px 3em 0 0;
     }
 }

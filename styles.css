@@ -1,0 +1,132 @@
+/* GLOBAL VARIABLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+    scroll-behavior: smooth;
+    /* background: rgba(97, 109, 101, 0.527); */
+    background: url(https://png.pngtree.com/background/20210709/original/pngtree-business-background-banner-business-website-picture-image_306168.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5em;
+}
+
+body {
+    margin: 0;
+}
+
+
+.container {
+    width: 90%;
+    max-width: fit-content;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+
+/* NAV BAR */
+
+.nav {
+    background-color: black;
+    padding: 1px;
+    position: fixed;
+    border-top: 2px solid red ;
+    border-bottom: 2px solid red ;
+    width: 100%;
+    
+}
+
+.nav-bar {
+    margin-top: 0;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item, .e-item {
+    margin: 0 2rem;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    border-radius: 10em;
+    background-color: rgb(78, 77, 75);
+    padding: 0.3em 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+
+/* BODY */
+
+.intro, .about, .rules {
+    width: 70%;
+    margin: 10rem auto;
+    font-size: 1.5em;
+
+    
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+h2 {
+    margin-top: 4rem;
+}
+
+ol > li {
+    margin: 1em 0;
+}
+
+.rules-btn {
+    border-radius: 10em;
+    background-color: blue;
+    padding: 0.5em;
+}
+
+
+@media only screen and (max-width: 540px ) {
+    .nav-bar {
+        height: fit-content;
+        width: 100%;
+    }
+    
+    .nav {
+        position: static;
+        width: 100%;
+        padding: 0 15em;
+    }
+    
+    .nav > ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .nav > ul > li {
+        margin: 10px 0;
+    }
+}

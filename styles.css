@@ -558,13 +558,13 @@ font-weight: 900;
   
   /* ---------- 	MEDIA QUERIEs ----------  */
   
-  @media (max-width: 905px) {
+  @media only screen and (max-width: 905px) {
   
     .blogItem p {
       padding: 0;
     }
   }
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     .nav {
       padding: 1rem;
     }
@@ -663,7 +663,7 @@ font-weight: 900;
   }
   
 
-  @media (max-width: 900px) {
+  @media  only screen and (max-width: 900px) {
     html {
       font-size: 80%;
     }
@@ -673,7 +673,7 @@ font-weight: 900;
       font-size: 60%;
     }
   }
-  @media (max-width: 638px) {
+  @media only screen and (max-width: 638px) {
     html {
       font-size: 70%;
     }
@@ -711,7 +711,7 @@ font-weight: 900;
     }
   }
 
-  @media (max-width: 475px) {
+  @media only screen and (max-width: 475px) {
 
     header {
       height: 110%;

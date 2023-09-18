@@ -177,6 +177,9 @@ html {
     opacity: 0;
     transform: translateX(-20%);
     filter: blur(10px);
+    -webkit-transform: translateX(-20%); 
+    -webkit-filter: blur(10px);
+    -webkit-transition: all 700ms ease-in-out;
     transition: all 700ms ease-in-out;
    }
   
@@ -184,6 +187,9 @@ html {
     opacity: 1;
     transform: translateX(0%);
     filter: blur(0px);
+    -webkit-transform: translateX(0%); 
+    -webkit-filter: blur(0px);
+    
    }
 
    @keyframes pulse {

@@ -34,7 +34,6 @@ html {
 .cta {
   width: fit-content;
   height: fit-content;
-  display: inline-block;
   position: fixed;
   z-index: 9999;
   right: 3%;
@@ -49,6 +48,7 @@ html {
   animation: cta-hop 10s ease-in-out infinite;
   
 }
+
 
 @keyframes cta-hop {
   0% {
@@ -71,6 +71,53 @@ html {
     transform: translateY(0%);
   }
 }
+
+/* ----- to top button ----- */
+
+.to-top {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  
+  bottom: 5%;
+  left: 3%;
+  z-index: 9999;
+  padding: 2rem;
+  background-image: url(https://static.thenounproject.com/png/4595406-200.png);
+  background-size: cover;
+  animation: topButton;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-timeline: linear;
+  scroll-behavior: smooth;
+
+}
+
+@keyframes topButton {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+
+  96% {
+    transform: translateY(30%);
+    opacity: .5;
+  }
+  
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+}
+
+
+
+
+
 
 /* ---------- NAV-CSS ----------  */
 
@@ -217,11 +264,12 @@ html {
 
 
 .wrapper {
-    height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
     margin: 0;
+    position: relative;
 }
 
 header {
@@ -229,7 +277,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130%;
+    height: 150%;
     transform-style: preserve-3d;
     z-index: -1;
 }
@@ -658,7 +706,7 @@ font-weight: 900;
         text-align: center;
     }
     .nav > #nav-check:checked ~ .nav-list {
-      height: 300px;
+      height: 400px;
       background-color: rgb(56, 36, 36);
       position: absolute;
       z-index: 1;
@@ -739,5 +787,10 @@ font-weight: 900;
     .cta {
       bottom: 3%;
     }
+
+    .nav > .nav-list {
+      margin-top: 0;
+    }
+
 
   }

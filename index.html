@@ -10,11 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="">
+    <a href="" class="a-cta">
         <div class="cta">Hraj TU</div>
     </a>
 
+    <a href="#menu" >
+        <div class="to-top"></div>
+    </a>
+
     <div class="wrapper">
+        
         <nav class="nav">
             <input type="checkbox" id="nav-check">
               <div class="nav-header">
@@ -30,7 +35,7 @@
                 </label>
               </div>
             <ul class="nav-list">
-              <li><a href="#atf" class="hover-animation">Ako to funguje</a></li>
+              <li><a href="#atf" class="hover-animation" id="top">Ako to funguje</a></li>
               <li><a href="#rules" class="hover-animation">Pravidlá</a></li>
               <li><a href="#money" class="hover-animation">MONEY</a></li>
               <li><a href="#bb" class="hover-animation">Blog</a></li>
@@ -42,7 +47,7 @@
             <img src="https://lh3.googleusercontent.com/pw/AIL4fc9DDHajbQrZkwJofv5lgK8YIXgM2vff1e0lYQ9BOH8PDeBJ5qB8cOEFeukiF05RbwjDPTLZlxQDyvwHEPJkxTeXj4QfkiiunWFarC8muHu5IQIeBpp5=w2400" alt="" class="foreground-right">
             <h1 class="title">GOLDEN MINES</h1>
         </header>
-        <section class="first-section" id="atf">
+        <section class="first-section" id="atf section">
             <h1 class="hidden">WHAT?!! Ako to funguje? </h1>
             <div class="p-wrapper">
                 <p class="p-container eye-point">
@@ -55,7 +60,7 @@
                 </p>
             </div>
         </section>
-        <section class="second-section">
+        <section class="second-section" id=" section">
             <h1 class="hidden" id="rules">hmm... Pravidlá?</h1>
             <div class="p-wrapper">
                 <div class="p-container container-img">
@@ -75,7 +80,7 @@
             </div>
         </section>
         
-        <section class="third-section">
+        <section class="third-section" id=" section">
             <div class="p-wrapper-column">
                 <h1 class="hidden">Oficiálne pravidlá</h1>
                 <p>Golden Mines je hra, ktorá má určité pravidlá a podmienky, ktoré hráč musí dodržiavať. Sú tam obyčajné veci typu že, keď budeš podvádzať, tak majú plné právo ti zablokovať účet atď atď... No ak plánuješ začať hrať, tu máš link, určite to čekni.</p>
@@ -85,7 +90,7 @@
             </div>
         </section>
 
-        <section class="fourth-section">
+        <section class="fourth-section" id=" section">
             <div class="p-wrapper-column">
                 <h1 class="hidden" id="money">Ako vytiahnuť peniaze? 
                 </h1>
@@ -104,7 +109,7 @@
                 
             </div>
         </section>
-        <section class="fifth-section" >
+        <section class="fifth-section" id=" section" >
             <div class="p-wrapper-column">
                 <h1 class="hidden" id="bb">BONUSY + Blog</h1>
                 <div class="bonus-col">
@@ -124,7 +129,7 @@
                 </div>
             </div>
         </section>
-        <section class="blog">
+        <section class="blog" id=" section">
             <div class="p-wrapper-column">
                 <h1 class="hidden">BLOG</h1>
                 <div class="blog-cards">
@@ -173,6 +178,7 @@
             </div>
         </section>
         
+        
     </div>
 
 
@@ -186,7 +192,6 @@
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry)
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
                 }
@@ -195,6 +200,9 @@
 
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
+
+
+        
     </script>
 </body>
 </html>

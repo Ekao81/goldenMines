@@ -74,65 +74,28 @@ html {
 
 /* ----- to top button ----- */
 
-/* .to-top {
-  position: fixed;
-  width: 2rem;
-  height: 2rem;
-  
-  bottom: 5%;
-  left: 3%;
-  z-index: 9999;
-  padding: 2rem;
-  background-image: url(https://static.thenounproject.com/png/4595406-200.png);
-  background-size: cover;
-  animation: topButton;
-  animation-iteration-count: 1;
-  animation-duration: 3s;
-  animation-timeline: linear;
-  scroll-behavior: smooth;
-
-}
-
-@keyframes topButton {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    transform: translateY(40%);
-    opacity: 0;
-  }
-
-  96% {
-    transform: translateY(30%);
-    opacity: .5;
-  }
-  
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  
-} */
 
 .scrollToTopBtn {
-  background-color: black;
+  background-image: url(https://static.thenounproject.com/png/4595406-200.png);
+  background-color: rgb(165, 156, 156);
+  border-radius: 40em;
+  background-position: center;
+  background-size: cover;
   border: none;
-  color: white;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 48px;
-  width: 48px;
-
+  height: 2rem;
+  width: 2rem;
+  padding: 2rem;
   /* place it at the bottom right corner */
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  left: 3%;
+  bottom: 5%;
   /* keep it at the top of everything else */
   z-index: 100;
   /* hide with opacity */
-  opacity: 1;
+  opacity: 0;
   /* also add a translate effect */
-  /* transform: translateY(100px); */
+  transform: translateY(100px);
   /* and a transition */
   transition: all 0.5s ease;
 }
@@ -200,7 +163,7 @@ html {
   }
   .nav > .nav-list > li {
     list-style-type: none;
-    border-bottom: 2px solid black;
+    
     margin: 0 1rem;
   }
   .nav > .nav-list > li a {
@@ -344,7 +307,7 @@ img {
     
 }
 
-img:hover {
+.hover:hover {
   animation: pulse 800ms ease-in-out;
 }
 
@@ -420,6 +383,12 @@ img:hover {
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
+    
+}
+
+.second-section h1 {
+  width: fit-content;
+  margin: 2rem auto;
 }
 
 
@@ -428,7 +397,7 @@ img:hover {
 .third-section {
     font-size: 1.8rem;
     background: rgb(188,108,37);
-background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%);
+    background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%);
     color: var(--dark-green);
     display: flex;
     flex-direction: column;
@@ -764,6 +733,10 @@ font-weight: 900;
       bottom: 3%;
     }
 
+    .showBtn {
+      bottom: 4%;
+    }
+
     .nav > .nav-list {
       margin-top: 0;
     }
@@ -824,7 +797,4 @@ font-weight: 900;
     }
   }
 
-  @media only screen and (max-width: 475px) {
 
-   
-  }

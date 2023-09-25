@@ -126,13 +126,13 @@ html {
   /* place it at the bottom right corner */
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   /* keep it at the top of everything else */
   z-index: 100;
   /* hide with opacity */
-  opacity: 0;
+  opacity: 1;
   /* also add a translate effect */
-  transform: translateY(100px);
+  /* transform: translateY(100px); */
   /* and a transition */
   transition: all 0.5s ease;
 }

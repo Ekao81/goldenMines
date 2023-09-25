@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
     <a href="" class="a-cta">
@@ -15,7 +17,7 @@
     </a>
 
     <a href="#menu" >
-        <div class="to-top"></div>
+        <div class="scrollToTopBtn">☝️</div>
     </a>
 
     <div class="wrapper">
@@ -48,7 +50,7 @@
             <h1 class="title">GOLDEN MINES</h1>
         </header>
         <section class="first-section" id="atf section">
-            <h1 class="hidden">WHAT?!! Ako to funguje? </h1>
+            <h1 data-aos="fade-right">WHAT?!! Ako to funguje? </h1>
             <div class="p-wrapper">
                 <p class="p-container eye-point">
                     Golden Mines je populárnou online hrou, ktorá umožňuje hráčom ťažiť virtuálne zlato a zarobiť si reálne peniaze. Hra je k dispozícii od roku 2007 a má veľkú základňu hráčov v Rusku a ďalších krajinách.
@@ -61,12 +63,14 @@
             </div>
         </section>
         <section class="second-section" id=" section">
-            <h1 class="hidden" id="rules">hmm... Pravidlá?</h1>
+            <div data-aos="fade-right">
+                <h1  id="rules">hmm... Pravidlá?</h1>
+            </div>
             <div class="p-wrapper">
                 <div class="p-container container-img">
                     <img  src="https://lh3.googleusercontent.com/pw/AIL4fc_JHTX8qP8EedUizKuuDOhqvPA8HYAQA8ZOhrdyefDSOCs2l26OonTu_F_nuL8t9RU3XJeCE-rIxd51jhit5y4_uYezyNhdcSOiB9pRfBB-XQ9IvmTr=w2400" alt=""></img>
                 </div>
-                <p class="p-container"> Hlavnými hernými mechanikami hry Golden Mines sú ťažba virtuálneho zlata, obchodovanie a plnenie úloh. Hráči môžu ťažiť zlato tak, že si prenajmú trpaslíkov, ktorí za nich ťažia rudy rôznej kvality, ktoré sa vymieňa za virtuálnu menu. Čím viac zlata hráči ťažia, tým drahších/lepších trpaslíkov si môžu prenajať.   
+                <p class="p-container"> Hlavnými mechanikami hry Golden Mines sú ťažba virtuálneho zlata, obchodovanie a plnenie úloh. Hráči môžu ťažiť zlato tak, že si prenajmú trpaslíkov, ktorí za nich ťažia rudy rôznej kvality, ktoré sa vymieňa za virtuálnu menu. Čím viac zlata hráči ťažia, tým drahších/lepších trpaslíkov si môžu prenajať.   
                 </p>
             </div>
             <div class="p-wrapper">
@@ -82,7 +86,7 @@
         
         <section class="third-section" id=" section">
             <div class="p-wrapper-column">
-                <h1 class="hidden">Oficiálne pravidlá</h1>
+                <h1 data-aos="fade-right" >Oficiálne pravidlá</h1>
                 <p>Golden Mines je hra, ktorá má určité pravidlá a podmienky, ktoré hráč musí dodržiavať. Sú tam obyčajné veci typu že, keď budeš podvádzať, tak majú plné právo ti zablokovať účet atď atď... No ak plánuješ začať hrať, tu máš link, určite to čekni.</p>
 
                 <a href="https://play.gold-mines.biz/en/rules"><button>PRAVIDLÁ TU</button></a>
@@ -92,7 +96,7 @@
 
         <section class="fourth-section" id=" section">
             <div class="p-wrapper-column">
-                <h1 class="hidden" id="money">Ako vytiahnuť peniaze? 
+                <h1 data-aos="fade-right" id="money">Ako vytiahnuť peniaze? 
                 </h1>
                 <div class="p-wrapper gif-wrapper">
                     <p>Áno, predsalen</p>
@@ -111,7 +115,7 @@
         </section>
         <section class="fifth-section" id=" section" >
             <div class="p-wrapper-column">
-                <h1 class="hidden" id="bb">BONUSY + Blog</h1>
+                <h1 data-aos="fade-right" id="bb">BONUSY + Blog</h1>
                 <div class="bonus-col">
                     <h2>Golden BURSE</h2>
                     <p>Golden BURSE alebo takzvaná zlatá burza? Je pomerne nová mechanika v hre, stará len niekoľko mesiacov. A toto je hlavný dôvod prečo som sa vrátil k aktívnemu hraniu Golden Mines.</p>
@@ -131,7 +135,7 @@
         </section>
         <section class="blog" id=" section">
             <div class="p-wrapper-column">
-                <h1 class="hidden">BLOG</h1>
+                <h1 data-aos="fade-right">BLOG</h1>
                 <div class="blog-cards">
                     
     
@@ -182,27 +186,61 @@
     </div>
 
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+    <script>
+      AOS.init({
+        duration: 300,
+        once: true,
+        delay: 0,
+      });
+    </script>
+
     <script>
         var toggleClass = document.getElementById("menu");
       
         toggleClass.onclick = function() {
           toggleClass.classList.toggle("open-menu")
         }
-
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            })
-        })
-
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
-
-
-        
     </script>
+
+    <script>
+        // We select the element we want to target
+        var target = document.querySelectorAll("section");
+
+        var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+        var rootElement = document.documentElement;
+
+        // Next we want to create a function that will be called when that element is intersected
+        function callback(entries, observer) {
+        // The callback will return an array of entries, even if you are only observing a single item
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            // Show button
+            scrollToTopBtn.classList.add("showBtn");
+            } else {
+            // Hide button
+            scrollToTopBtn.classList.remove("showBtn");
+            }
+        });
+        }
+
+        function scrollToTop() {
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        }
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+
+        // Next we instantiate the observer with the function we created above. This takes an optional configuration
+        // object that we will use in the other examples.
+        let observer = new IntersectionObserver(callback);
+        // Finally start observing the target element
+        observer.observe(target);
+
+    </script>
+
+    
 </body>
 </html>

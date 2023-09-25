@@ -74,7 +74,7 @@ html {
 
 /* ----- to top button ----- */
 
-.to-top {
+/* .to-top {
   position: fixed;
   width: 2rem;
   height: 2rem;
@@ -112,7 +112,36 @@ html {
     opacity: 1;
   }
   
+} */
+
+.scrollToTopBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
 }
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 
@@ -713,6 +742,36 @@ font-weight: 900;
       top: 0;
       padding-top: 100px;
     }
+
+    header {
+      height: 110%;
+    }
+    .title {
+      font-size:4rem;
+    }
+
+    .gif {
+      width: 200px;
+      height: 150px;
+      background-position: center;
+    }
+
+    .blogItem {
+      width: 300px;
+    }
+
+    .cta {
+      bottom: 3%;
+    }
+
+    .nav > .nav-list {
+      margin-top: 0;
+    }
+
+    .nav > .nav-list > li {
+      border-bottom: none;
+      text-transform: uppercase;
+    }
   
   }
   
@@ -767,30 +826,5 @@ font-weight: 900;
 
   @media only screen and (max-width: 475px) {
 
-    header {
-      height: 110%;
-    }
-    .title {
-      font-size:4rem;
-    }
-
-    .gif {
-      width: 200px;
-      height: 150px;
-      background-position: center;
-    }
-
-    .blogItem {
-      width: 300px;
-    }
-
-    .cta {
-      bottom: 3%;
-    }
-
-    .nav > .nav-list {
-      margin-top: 0;
-    }
-
-
+   
   }

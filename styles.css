@@ -292,32 +292,6 @@ html {
     }
   }
 
-  @keyframes blur-right {
-    30% {
-      transform: translateX(-30%);
-      opacity: 0;
-      filter: blur(10px);
-    }
-
-    100% {
-      transform: translateX(0%);
-      opacity: 1;
-      filter: blur(0);
-    }
-    
-  }
-  
-  @keyframes blur-left {
-    0% {
-      transform: translateX(30%);
-      opacity: 0;
-    }
-
-    100% {
-      translateX: 0;
-      opacity: 1;
-    }
-  }
   
 
 /* ---------  HERO ----------- */
@@ -412,7 +386,6 @@ img {
     font-size: 3.4rem;
     margin: 2rem auto;
     width: fit-content;
-    animation: blur-right 300ms ease-in-out 1;
 }
 
 .first-section H1 {

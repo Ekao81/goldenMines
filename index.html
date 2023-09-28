@@ -50,8 +50,10 @@
             <h1 class="title">GOLDEN MINES</h1>
         </header>
         <section>
-            <section class="first-section " id="atf">
-                <h1>WHAT?!! Ako to funguje? </h1>
+            <section class="first-section " id="atf" >
+                <div id="highlight-effect4">
+                    <h1><apsan class="highlight-light">WHAT?!! Ako to funguje?</apsan></h1>
+                </div>
                 <div class="p-wrapper">
                     <p class="p-container eye-point">
                         Golden Mines je populárnou online hrou, ktorá umožňuje hráčom ťažiť virtuálne zlato a zarobiť si reálne peniaze. Hra je k dispozícii od roku 2007 a má veľkú základňu hráčov v Rusku a ďalších krajinách.
@@ -64,8 +66,8 @@
                 </div>
             </section>
             <section class="second-section ">
-                <div>
-                    <h1 id="rules">hmm... Pravidlá?</h1>
+                <div id="highlight-effect">
+                    <h1 id="rules"><span class="highlight">hmm... Pravidlá?</span></h1>
                 </div>
                 <div class="p-wrapper">
                     <div class="p-container container-img">
@@ -85,10 +87,10 @@
                 </div>
             </section>
             
-            <section class="third-section ">
+            <section class="third-section">
                 <div class="p-wrapper-column">
-                    <div>
-                        <h1  >Oficiálne pravidlá</h1>
+                    <div id="highlight-effect1">
+                        <h1><span class="highlight">Oficiálne pravidlá</span></h1>
                     </div>
                     <p>Golden Mines je hra, ktorá má určité pravidlá a podmienky, ktoré hráč musí dodržiavať. Sú tam obyčajné veci typu že, keď budeš podvádzať, tak majú plné právo ti zablokovať účet atď atď... No ak plánuješ začať hrať, tu máš link, určite to čekni.</p>
                     <a href="https://play.gold-mines.biz/en/rules"><button>PRAVIDLÁ TU</button></a>
@@ -97,8 +99,10 @@
             </section>
             <section class="fourth-section">
                 <div class="p-wrapper-column">
-                    <h1 id="money">Ako vytiahnuť peniaze?
-                    </h1>
+                    <div id="highlight-effect5">
+                        <h1 id="money"><span class="highlight-light">Ako vytiahnuť peniaze?</span>
+                        </h1>
+                    </div>
                     <div class="p-wrapper gif-wrapper">
                         <p>Áno, predsalen</p>
                         <div class="gif"></div>
@@ -112,13 +116,15 @@
             
                 </div>
             </section>
-            <section class="fifth-section" >
+            <section class="fifth-section">
                 <div class="p-wrapper-column">
-                    <h1 id="bb">BONUSY + Blog</h1>
+                    <div id="highlight-effect3">
+                        <h1 id="bb"><span class="highlight-light">BONUSY + Blog</span></h1>
+                    </div>
                     <div class="bonus-col">
                         <h2>Golden BURSE</h2>
                         <p>Golden BURSE alebo takzvaná zlatá burza? Je pomerne nová mechanika v hre, stará len niekoľko mesiacov. A toto je hlavný dôvod prečo som sa vrátil k aktívnemu hraniu Golden Mines.</p>
-                        <p>Teraz poďme k tomu ako to funguje, Zlatá burza ti umožňuje okamžite predať zlato za momentálny kurz (ktorý je určený aktuálnym množstvom hráčov) za takzvané <span class="cash-points"><a href="">CASH POINTS</a> </span>toré sú potrebné na to, aby si si mohol vytiahnuť peniaze.
+                        <p id="highlight-effect">Teraz poďme k tomu ako to funguje, Zlatá burza ti umožňuje okamžite predať zlato za momentálny kurz (ktorý je určený aktuálnym množstvom hráčov) za takzvané <span class="cash-points highlight"><a href="">CASH POINTS</a> </span> ktoré sú potrebné na to, aby si si mohol vytiahnuť peniaze.
                         </p>
                         <p>
                             Zlatá burza je k dispozícii všetkým hráčom, ktorí doplnili zostatok aspoň 5 000 rubľami.
@@ -131,7 +137,9 @@
             </section>
             <section class="blog">
                 <div class="p-wrapper-column">
-                    <h1>BLOG</h1>
+                    <div id="highlight-effect2">
+                        <h1><span class="highlight">BLOG</span></h1>
+                    </div>
                     <div class="blog-cards">
             
                         <div class="blogItem">
@@ -225,6 +233,148 @@
         let observer = new IntersectionObserver(callback);
         // Finally start observing the target element
         observer.observe(target);
+
+    </script>
+
+    <script>
+        const wrapper = document.getElementById("highlight-effect");
+            const className = "in-view";
+
+            const observer2 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper.classList.add(className);
+                            return;
+                        }
+
+                        wrapper.classList.remove(className);
+                    });
+                },
+                {
+                    threshold: 1
+                }
+            );
+
+        observer2.observe(wrapper);
+
+    </script>
+    <script>
+        const wrapper1 = document.getElementById("highlight-effect1");
+        const className1 = "in-view";
+
+            const observer3 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper1.classList.add(className1);
+                            return;
+                        }
+
+                        wrapper1.classList.remove(className1);
+                    });
+                },
+                {
+                    threshold: 1
+                }
+            );
+
+        observer3.observe(wrapper1);
+
+    </script>
+    <script>
+        const wrapper2 = document.getElementById("highlight-effect2");
+            const className2 = "in-view";
+
+            const observer4 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper2.classList.add(className2);
+                            return;
+                        }
+
+                        wrapper2.classList.remove(className2);
+                    });
+                },
+                {
+                    threshold: 1
+                }
+            );
+
+        observer4.observe(wrapper2);
+
+    </script>
+    <script>
+        const wrapper3 = document.getElementById("highlight-effect3");
+            const className3 = "in-view";
+
+            const observer5 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper3.classList.add(className3);
+                            return;
+                        }
+
+                        wrapper3.classList.remove(className3);
+                    });
+                },
+                {
+                    threshold: 1
+                }
+            );
+
+        observer5.observe(wrapper3);
+
+    </script>
+    <script>
+        const wrapper4 = document.getElementById("highlight-effect4");
+            const className4 = "in-view";
+
+            const observer6 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper4.classList.add(className4);
+                            return;
+                        }
+
+                        wrapper4.classList.remove(className4);
+                    });
+                },
+                {
+                    threshold: 0
+                }
+            );
+
+        observer6.observe(wrapper4);
+    </script>
+    <script>
+        const wrapper5 = document.getElementById("highlight-effect5");
+            const className5 = "in-view";
+
+            const observer7 = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            wrapper5.classList.add(className5);
+                            return;
+                        } else {
+                            
+                            wrapper5.classList.remove(className5);
+                        }
+
+                        
+                    });
+                },
+                {
+                    threshold: 1
+                }
+            );
+
+        observer7.observe(wrapper5);
+        
 
     </script>
 

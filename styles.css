@@ -210,6 +210,57 @@ html {
     transform-origin: bottom left;
   }
 
+  /* ------------ HIGHLIGHT ANIMATION ------------ */
+
+  .highlight {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .highlight::before {
+    position: absolute;
+    content: '';
+    z-index:-1;
+    top: -2px;
+    left: -5px;
+    right: -3px;
+    bottom: -2px;
+    background-color: #7eec99;
+    transform-origin: 0;
+    transition: transform .8s ease;
+    transform: scaleX(0);
+  }
+  
+  .in-view .highlight::before {
+    transform: scaleX(1);
+  }
+
+  
+  
+  .highlight-light {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .highlight-light::before {
+    position: absolute;
+    content: '';
+    z-index:-1;
+    top: -2px;
+    left: -5px;
+    right: -3px;
+    bottom: -2px;
+    background-color: #090a09;
+    transform-origin: 0;
+    transition: transform .8s ease;
+    transform: scaleX(0);
+  }
+  
+  .in-view .highlight-light::before {
+    transform: scaleX(1);
+  }
+  
+
   /* other animations */
 
    .hidden {
@@ -353,6 +404,8 @@ img {
 
     color: var(--light-orange);
     padding-bottom: 2rem;
+
+    
 }
 
  h1 {
@@ -410,7 +463,7 @@ img {
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
-    
+
 }
 
 .second-section h1 {
@@ -423,13 +476,16 @@ img {
 
 .third-section {
     font-size: 1.8rem;
-    background: rgb(188,108,37);
-    background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%);
+    /* background: rgb(188,108,37);
+    background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%); */
+    background-color: white;
     color: var(--dark-green);
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
+
 }
+
 
 ol > li {
     margin: 2rem auto;
@@ -522,7 +578,7 @@ button {
 .cash-points {
     color: red;
 }
-a {
+.cash-points  a {
     text-decoration: none;
     color: red;
 }

@@ -449,8 +449,8 @@ img {
 
 .third-section {
     font-size: 1.8rem;
-    /* background: rgb(188,108,37);
-    background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%); */
+    background: rgb(188,108,37);
+    background: linear-gradient(90deg, rgba(188,108,37,1) 0%, rgba(221,161,94,1) 76%, rgba(221,161,94,1) 76%);
     background-color: white;
     color: var(--dark-green);
     display: flex;
@@ -482,6 +482,10 @@ button {
     cursor: pointer;
 }
 
+.third-section p {
+  margin: auto 1rem;
+}
+
 /* ---------  fourth SECTION  ----------- */
 
 .fourth-section {
@@ -511,7 +515,7 @@ button {
     background-color: rgba(1, 1, 1, .5);
     padding: 2rem;
     border-radius: 10px;
-
+    
     box-shadow: 2px 4px 84px 0px rgba(160, 94, 18, 0.75);
     -webkit-box-shadow: 2px 4px 84px 0px rgba(160, 94, 18, 0.75);
     -moz-box-shadow: 2px 4px 84px 0px rgba(160, 94, 18, 0.75);
@@ -675,6 +679,13 @@ font-weight: 900;
     .blogItem p {
       padding: 0;
     }
+
+    .p-wrapper-column {
+      padding: 1rem;
+    }
+    .p-wrapper {
+      padding: 1rem;
+    }
   }
   @media only screen and (max-width: 480px) {
     .nav {
@@ -765,7 +776,7 @@ font-weight: 900;
     }
     .nav > #nav-check:checked ~ .nav-list {
       height: 400px;
-      background-color: rgb(56, 36, 36);
+      background-color: rgb(14, 6, 6);
       position: absolute;
       z-index: 1;
       top: 0;
@@ -805,7 +816,19 @@ font-weight: 900;
       border-bottom: none;
       text-transform: uppercase;
     }
+    .highlight::before {
+      right: -20px;
+    }
+    .highlight-light::before {
+      right: -20px;
+    }
   
+  }
+
+  @media (prefers-reduced-motion) {
+    html {
+      animation: none;
+    }
   }
   
 
